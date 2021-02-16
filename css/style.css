@@ -1,0 +1,55 @@
+.insta_logo {
+    display: inline-block;
+	background: url('../imgs/insta_icon.png') no-repeat -157px -1px;
+	width: 27px;
+	height: 28px;
+}
+.insta_letter {
+    display: inline-block;
+	background: url('../imgs/insta_icon.png') no-repeat 0 0;
+	width: 155px;
+	height: 46px;
+}
+body{
+    background: #fafafa;
+}
+
+#header{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100;
+    z-index: 999;/*header가 항상 위에 존재*/
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,1);
+}
+
+#header .inner{
+    width: 975px;
+    height: 88px;
+    margin: 0 auto;
+}
+
+#header .inner .logo > a{
+    color: transparent;
+}
+
+#header .inner .logo div{
+    vertical-align: middle;
+}
+
+#header .inner .logo .insta_logo{
+    position: relative;
+    margin-right: 25px;
+}
+
+#header .inner .logo .insta_logo::after{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 30px;
+    right: -15px;
+    top: 0;
+    background: #000;
+}
