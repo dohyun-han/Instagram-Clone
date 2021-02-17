@@ -10,6 +10,36 @@
 	width: 155px;
 	height: 46px;
 }
+.light_search {
+    display: inline-block;
+	background: url('../imgs/insta_icon.png') no-repeat -359px -185px;
+	width: 24px;
+	height: 23px;
+}
+.compass {
+    display: inline-block;
+	background: url('../imgs/insta_icon.png') no-repeat -29px -313px;
+	width: 20px;
+	height: 20px;
+}
+.light_heart {
+    display: inline-block;
+	background: url('../imgs/insta_icon.png') no-repeat -359px -209px;
+	width: 21px;
+	height: 19px;
+}
+.light_person {
+    display: inline-block;
+	background: url('../imgs/insta_icon.png') no-repeat -283px -314px;
+	width: 20px;
+	height: 19px;
+}
+.light_camera {
+    display: inline-block;
+	background: url('../imgs/insta_icon.png') no-repeat -358px -251px;
+	width: 22px;
+	height: 19px;
+}
 body{
     background: #fafafa;
 }
@@ -29,6 +59,9 @@ body{
     width: 975px;
     height: 88px;
     margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #header .inner .logo > a{
@@ -43,6 +76,11 @@ body{
     position: relative;
     margin-right: 25px;
 }
+#header .inner .logo .insta_letter{
+    position: relative;
+    top:5px;
+}
+
 
 #header .inner .logo .insta_logo::after{
     position: absolute;
@@ -52,4 +90,71 @@ body{
     right: -15px;
     top: 0;
     background: #000;
+}
+
+#search_field{
+    width: 180px;
+    height: 25px;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 6px;/*둥글게*/
+    padding: 3px 35px;/*상하  좌우*/
+    color: #888;
+    font-weight: 400;
+    /* text-align: left; */
+    font-size: 17px;
+    outline: none;
+}
+
+#header .search_box .fake_field{
+    position: absolute;
+    font-size: 17px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    pointer-events: none;
+}
+
+#header .search_box{
+    position: relative;
+}
+
+#search_field::placeholder{
+    font-size: 0;
+    color: gray;
+}
+#header .search_box .fake_field > span:nth-child(1){
+    position:relative;
+    top:3px;
+}
+#header .search_box .fake_field > span:nth-child(2){
+    color: #999;
+    position:relative;
+    bottom:2px;
+    left:-4px;
+}
+
+#search_field:focus::placeholder{
+    font-size: 16px;
+    color:transparent;
+}
+
+
+#search_field:focus ~ .fake_field > span:nth-child(1){
+    transform: translate(-106px);
+}
+
+#search_field:focus ~ .fake_field > span:nth-child(2){
+    display: none;
+}
+
+#header .search_box .fake_field{
+    position: absolute;
+
+}
+
+#header .right_icons{
+    width: 130px;
+    display: flex;/*flex 컨테이너로 만듦 넒이를 넓힘*/
+    justify-content: space-between;/*flex 사이에 여유공간*/
 }
