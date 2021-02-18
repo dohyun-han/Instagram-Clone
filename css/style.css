@@ -6,15 +6,21 @@
 }
 .insta_letter {
     display: inline-block;
-	background: url('../imgs/insta_icon.png') no-repeat 0 0;
-	width: 155px;
-	height: 46px;
+	background: url('../imgs/insta_icon.png') no-repeat -210px -1px;
+	width: 105px;
+	height: 31.3px;
 }
 .light_search {
     display: inline-block;
-	background: url('../imgs/insta_icon.png') no-repeat -359px -185px;
+	/* background: url('../imgs/insta_icon.png') no-repeat -359px -185px;
 	width: 24px;
-	height: 23px;
+	height: 23px; */
+}
+.home {
+    display: inline-block;
+	background: url('../imgs/insta_icon.png') no-repeat -359px -1px;
+	width: 21px;
+	height: 20px;
 }
 .compass {
     display: inline-block;
@@ -40,6 +46,23 @@
 	width: 22px;
 	height: 19px;
 }
+.more_icon {
+    display: inline-block;
+	background: url('../imgs/insta_icon.png') no-repeat -60px -345px;
+	width: 13px;
+	height: 5px;
+}
+
+.m_text{
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.s_text{
+    font-size: 12px;
+}
+
 body{
     background: #fafafa;
 }
@@ -49,7 +72,7 @@ body{
     position: absolute;
     left: 0;
     top: 0;
-    height: 100;
+    height: 80px;
     z-index: 999;/*header가 항상 위에 존재*/
     background: white;
     border-bottom: 1px solid rgba(0,0,0,1);
@@ -57,7 +80,7 @@ body{
 
 #header .inner{
     width: 975px;
-    height: 88px;
+    height: 75px;
     margin: 0 auto;
     display:flex;
     justify-content: space-between;
@@ -93,22 +116,22 @@ body{
 }
 
 #search_field{
-    width: 180px;
+    width: 170px;
     height: 25px;
     background: #fafafa;
     border: 1px solid #dbdbdb;
-    border-radius: 6px;/*둥글게*/
+    border-radius: 3px;/*둥글게*/
     padding: 3px 35px;/*상하  좌우*/
     color: #888;
     font-weight: 400;
     /* text-align: left; */
-    font-size: 17px;
+    font-size: 14px;
     outline: none;
 }
 
 #header .search_box .fake_field{
     position: absolute;
-    font-size: 17px;
+    font-size: 15px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -55%);
@@ -125,13 +148,10 @@ body{
 }
 #header .search_box .fake_field > span:nth-child(1){
     position:relative;
-    top:3px;
+    top:2px;
 }
 #header .search_box .fake_field > span:nth-child(2){
     color: #999;
-    position:relative;
-    bottom:2px;
-    left:-4px;
 }
 
 #search_field:focus::placeholder{
@@ -141,7 +161,7 @@ body{
 
 
 #search_field:focus ~ .fake_field > span:nth-child(1){
-    transform: translate(-106px);
+    transform: translate(-102px);
 }
 
 #search_field:focus ~ .fake_field > span:nth-child(2){
@@ -154,7 +174,53 @@ body{
 }
 
 #header .right_icons{
-    width: 130px;
+    width: 150px;
     display: flex;/*flex 컨테이너로 만듦 넒이를 넓힘*/
     justify-content: space-between;/*flex 사이에 여유공간*/
 }
+
+#main_container{
+    padding-top: 130px;
+    display: flex;/*컨테이너에 배치할 때 사용*/
+    justify-content: center;
+}
+
+#main_container .inner{
+    width: 975px;
+    /* height: 500px;
+    background: red; */
+}
+
+.contents{
+    width: 610px;
+    height: 500px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 4px;
+    margin-bottom: 60px;
+    background-color: white;
+}
+
+.contents .top .profile_img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;/*사진 둥글게*/
+    overflow: hidden;/*넘치는 사진 자름*/
+    margin-left: 5px;
+}
+
+.contents .top .profile_img img{/*부모의 100%크기 딱 맞게*/
+    width: 100%;
+}
+
+.contents .top .user_container{
+    display: flex;
+}
+
+.contents .top{
+    display: flex;
+    justify-content: space-between;/*간격읠 최대한 벌린다*/
+    align-items: center;
+    padding: 10px 20px;
+}
+
+  

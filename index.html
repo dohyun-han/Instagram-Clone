@@ -13,22 +13,25 @@
 </head>
 <body>
     <section id="container">
-        <header id = "header">
+        <header id = "header"><!--헤더-->
             <section class="inner">
                 <h1 class="logo">
                     <a href="index.html">
                         <div class="insta_logo"></div>
-                        <div class="insta_letter"></div>
+                        <div class="insta_letter">
+                        </div>
                     </a>
                 </h1>
                 <div class="search_box">
                     <input type="text" placeholder="" id="search_field">
                     <div class="fake_field">
-                        <span class="light_search"></span>
+                        <span class="light_search"><img src="imgs/search.png" alt="light_search"></span>
+                        <!-- <span class="light_search"></span> -->
                         <span>검색</span>
                     </div>
                 </div>
                 <div class="right_icons">
+                    <div class="home"></div>
                     <div class="light_camera"></div>
                     <div class="compass"></div>
                     <div class="light_heart"></div>
@@ -36,6 +39,27 @@
                 </div>
             </section>
         </header>
+        <section id="main_container"><!--바디-->
+            <div class="inner">
+                <div class="contents_box">
+                    <article class="contents"><!--게시물-->
+                        <div class="top"><!--사용자 정보-->
+                            <div class="user_container">
+                                <div class="profile_img">
+                                   <img src="https://t1.daumcdn.net/cfile/blog/99E0103D5CE5E19926" 
+                                   alt="profile_img"> 
+                                </div>
+                                <div class="user_name">
+                                    <div class="nick_name m_text">ㅎㅇ</div><!--클래스 이름이 두개-->
+                                    <div class="country s_text">Gyeonggi-do, Korea</div><!--클래스 이름이 두개-->
+                                </div>
+                            </div>
+                            <div class="more_icon"></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
     </section>
 </body>
 </html>
