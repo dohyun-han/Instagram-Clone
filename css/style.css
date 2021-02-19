@@ -1,58 +1,83 @@
 .insta_logo {
     display: inline-block;
-	background: url('../imgs/insta_icon.png') no-repeat -157px -1px;
-	width: 27px;
-	height: 28px;
+	background: url('../imgs/spritesheet.png') no-repeat -646px -5px;
+	width: 30px;
+	height: 30px;
 }
 .insta_letter {
     display: inline-block;
-	background: url('../imgs/insta_icon.png') no-repeat -210px -1px;
-	width: 105px;
-	height: 31.3px;
+	background: url('../imgs/spritesheet.png') no-repeat -715px -7px;
+	width: 107px;
+	height: 31px;
 }
-.light_search {
+.search_outline {
     display: inline-block;
-	/* background: url('../imgs/insta_icon.png') no-repeat -359px -185px;
-	width: 24px;
-	height: 23px; */
+	background: url('../imgs/spritesheet.png') no-repeat -228px -287px;
+	width: 10px;
+	height: 10px;
 }
+
 .home {
     display: inline-block;
-	background: url('../imgs/insta_icon.png') no-repeat -359px -1px;
-	width: 21px;
-	height: 20px;
-}
-.compass {
-    display: inline-block;
-	background: url('../imgs/insta_icon.png') no-repeat -29px -313px;
-	width: 20px;
-	height: 20px;
-}
-.light_heart {
-    display: inline-block;
-	background: url('../imgs/insta_icon.png') no-repeat -359px -209px;
-	width: 21px;
-	height: 19px;
-}
-.light_person {
-    display: inline-block;
-	background: url('../imgs/insta_icon.png') no-repeat -283px -314px;
-	width: 20px;
-	height: 19px;
-}
-.light_camera {
-    display: inline-block;
-	background: url('../imgs/insta_icon.png') no-repeat -358px -251px;
+	background: url('../imgs/spritesheet.png') no-repeat -874px -5px;
 	width: 22px;
-	height: 19px;
+	height: 21px;
+}
+.camera_outline{
+    display: inline-block;
+    background: url('../imgs/spritesheet.png') no-repeat -3px -347px;
+	width: 24px;
+	height: 22px;
+}
+.compass_outline {
+    display: inline-block;
+	background: url('../imgs/spritesheet.png') no-repeat -840px -356px;
+	width: 22px;
+	height: 22px;
+}
+.heart_outline {
+    display: inline-block;
+	background: url('../imgs/spritesheet.png') no-repeat -315px -374px;
+	width: 24px;
+	height: 22px;
+}
+.person {
+    display: inline-block;
+	background: url('../imgs/spritesheet.png') no-repeat -440px -315px;
+	width: 22px;
+	height: 24px;
 }
 .more_icon {
     display: inline-block;
-	background: url('../imgs/insta_icon.png') no-repeat -60px -345px;
-	width: 13px;
-	height: 5px;
+	background: url('../imgs/spritesheet.png') no-repeat -537px -393px;
+	width: 14px;
+	height: 4px;
 }
-
+.bubble_icon{
+    display: inline-block;
+    background: url('../imgs/spritesheet.png') no-repeat -367px -347px;
+    width: 24px;
+    height: 24px;
+}
+.share_icon {
+    display: inline-block;
+	background: url('../imgs/spritesheet.png') no-repeat -29px -374px;
+	width: 24px;
+	height: 21px;
+}
+.bookmark_outline {
+    display: inline-block;
+	background: url('../imgs/spritesheet.png') no-repeat -442px -55px;
+	width: 19px;
+	height: 24px;
+}
+.small_heart_outline{
+    display: inline-block;
+	background: url('../imgs/spritesheet.png') no-repeat -315px -374px;
+	width: 24px;
+	height: 22px;
+    transform: scale(0.5);
+}
 .m_text{
     font-size: 14px;
     font-weight: bold;
@@ -91,9 +116,9 @@ body{
     color: transparent;
 }
 
-#header .inner .logo div{
+/* #header .inner .logo div{
     vertical-align: middle;
-}
+} */
 
 #header .inner .logo .insta_logo{
     position: relative;
@@ -110,7 +135,7 @@ body{
     content: '';
     width: 1px;
     height: 30px;
-    right: -15px;
+    right: -20px;
     top: 0;
     background: #000;
 }
@@ -146,10 +171,7 @@ body{
     font-size: 0;
     color: gray;
 }
-#header .search_box .fake_field > span:nth-child(1){
-    position:relative;
-    top:2px;
-}
+
 #header .search_box .fake_field > span:nth-child(2){
     color: #999;
 }
@@ -174,7 +196,7 @@ body{
 }
 
 #header .right_icons{
-    width: 150px;
+    width: 200px;
     display: flex;/*flex 컨테이너로 만듦 넒이를 넓힘*/
     justify-content: space-between;/*flex 사이에 여유공간*/
 }
@@ -193,7 +215,7 @@ body{
 
 .contents{
     width: 610px;
-    height: 500px;
+    height: auto;
     border: 1px solid rgba(0,0,0,0.08);
     border-radius: 4px;
     margin-bottom: 60px;
@@ -205,7 +227,7 @@ body{
     height: 30px;
     border-radius: 50%;/*사진 둥글게*/
     overflow: hidden;/*넘치는 사진 자름*/
-    margin-left: 5px;
+    margin-right: 10px;
 }
 
 .contents .top .profile_img img{/*부모의 100%크기 딱 맞게*/
@@ -223,4 +245,57 @@ body{
     padding: 10px 20px;
 }
 
-  
+.contents .img_section {
+    overflow: hidden;
+}
+
+.contents .img_section img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contents .bottom_icons{
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contents .bottom_icons .left_icons{
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contents .like{
+    margin: 0 0 8px;
+    padding: 0 16px;
+    color: #262626;
+}
+
+.contents .comment_container{
+    padding: 0px 16px;
+}
+
+.contents .comment_container .nick_name{
+    margin: 0 0 0 -5px;
+    padding: 0 0 0 5px;
+}
+
+.contents .my_comment_container .my_comment{
+    display: flex;
+}
+
+.contents .other_comments_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contents .other_comments_container .other_comments{
+    display: flex;
+    margin: 0 0 0 -5px;
+    padding: 0 0 0 5px;
+}
