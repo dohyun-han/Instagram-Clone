@@ -78,6 +78,12 @@
 	height: 22px;
     transform: scale(0.5);
 }
+.emoticon {
+    display: inline-block;
+	background: url('../imgs/spritesheet.png') no-repeat -237px -347px;
+	width: 24px;
+	height: 24px;
+}
 .m_text{
     font-size: 14px;
     font-weight: bold;
@@ -128,8 +134,6 @@ body{
     position: relative;
     top:5px;
 }
-
-
 #header .inner .logo .insta_logo::after{
     position: absolute;
     content: '';
@@ -139,7 +143,6 @@ body{
     top: 0;
     background: #000;
 }
-
 #search_field{
     width: 170px;
     height: 25px;
@@ -153,7 +156,6 @@ body{
     font-size: 14px;
     outline: none;
 }
-
 #header .search_box .fake_field{
     position: absolute;
     font-size: 15px;
@@ -162,30 +164,23 @@ body{
     transform: translate(-50%, -55%);
     pointer-events: none;
 }
-
 #header .search_box{
     position: relative;
 }
-
 #search_field::placeholder{
     font-size: 0;
     color: gray;
 }
-
 #header .search_box .fake_field > span:nth-child(2){
     color: #999;
 }
-
 #search_field:focus::placeholder{
     font-size: 16px;
     color:transparent;
 }
-
-
 #search_field:focus ~ .fake_field > span:nth-child(1){
     transform: translate(-102px);
 }
-
 #search_field:focus ~ .fake_field > span:nth-child(2){
     display: none;
 }
@@ -194,19 +189,16 @@ body{
     position: absolute;
 
 }
-
 #header .right_icons{
     width: 200px;
     display: flex;/*flex 컨테이너로 만듦 넒이를 넓힘*/
     justify-content: space-between;/*flex 사이에 여유공간*/
 }
-
 #main_container{
     padding-top: 130px;
     display: flex;/*컨테이너에 배치할 때 사용*/
     justify-content: center;
 }
-
 #main_container .inner{
     width: 975px;
     /* height: 500px;
@@ -221,7 +213,6 @@ body{
     margin-bottom: 60px;
     background-color: white;
 }
-
 .contents .top .profile_img{
     width: 30px;
     height: 30px;
@@ -229,71 +220,126 @@ body{
     overflow: hidden;/*넘치는 사진 자름*/
     margin-right: 10px;
 }
-
 .contents .top .profile_img img{/*부모의 100%크기 딱 맞게*/
     width: 100%;
 }
-
 .contents .top .user_container{
     display: flex;
 }
-
 .contents .top{
     display: flex;
     justify-content: space-between;/*간격읠 최대한 벌린다*/
     align-items: center;
-    padding: 10px 20px;
+    padding: 16px;
 }
-
 .contents .img_section {
     overflow: hidden;
 }
-
 .contents .img_section img{
     max-width: 100%;
     height: auto;
     display: block;
 }
-
 .contents .bottom_icons{
     padding: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .contents .bottom_icons .left_icons{
-    width: 120px;
+    width: 110px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
+.contents .bottom_icons .left_icons > div{
+    cursor: pointer;
+}
+.contents .bottom_icons .right_icons > div{
+    cursor: pointer;
+}
 .contents .like{
     margin: 0 0 8px;
     padding: 0 16px;
     color: #262626;
 }
-
-.contents .comment_container{
-    padding: 0px 16px;
+.contents .comment_container .enrolled_comments{
+    padding: 0 16px;
 }
-
 .contents .comment_container .nick_name{
     margin: 0 0 0 -5px;
     padding: 0 0 0 5px;
 }
-
 .contents .my_comment_container .my_comment{
     display: flex;
 }
-
+.contents .comments_coll{
+    font-size: 13px;
+    color: gray;
+}
 .contents .other_comments_container{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .contents .other_comments_container .other_comments{
     display: flex;
+}
+.contents .other_comments_container .small_heart_outline{
+    cursor: pointer;
+}
+.contents .time_container{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 0 0 16px 16px;
+    
+}
+.contents .time_container .time{
+    font-size: 10px;
+    color: gray;
+}
+.contents .comments_bottom .comments_write_container{
+    padding: 0 16px;
+    height:50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contents .comments_bottom .comments_write_container .emoticon{
+    margin: 8px 16px 8px 0;
+}
+.contents .comments_bottom .comments_write_container textarea{
+    position: relative;
+    right: 8px;
+    width: 86%;
+    height: 17px;
+    font: 400 15px Arial;
+    padding: 0;
+    color: grey;
+    overflow: hidden;
+    border: none;
+    resize: none;
+    cursor: text;
+}
+.contents .comments_bottom .comments_write_container textarea:focus{
+    outline: none;
+}
+.contents .comments_bottom .comments_write_container .upload_btn{
+    width: auto;
+    padding: 0;
+    color: #3897f0;
+    overflow: visible;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0.6;
+}
+.contents .comments_bottom .comments_write_container .upload_btn:focus{
+    outline: none;
+    border: none;
+}
+.contents .comments_bottom .comments_write_container textarea:focus~.upload_btn{
+    pointer-events: initial;
+    opacity: 1;
 }
