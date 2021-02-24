@@ -103,15 +103,15 @@ body{
     position: absolute;
     left: 0;
     top: 0;
-    height: 80px;
+    height: 55px;
     z-index: 999;/*header가 항상 위에 존재*/
     background: white;
-    border-bottom: 1px solid rgba(0,0,0,1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 #header .inner{
     width: 975px;
-    height: 75px;
+    height: 55px;
     margin: 0 auto;
     display:flex;
     justify-content: space-between;
@@ -144,8 +144,8 @@ body{
     background: #000;
 }
 #search_field{
-    width: 170px;
-    height: 25px;
+    width: 160px;
+    height: 18px;
     background: #fafafa;
     border: 1px solid #dbdbdb;
     border-radius: 3px;/*둥글게*/
@@ -195,16 +195,51 @@ body{
     justify-content: space-between;/*flex 사이에 여유공간*/
 }
 #main_container{
-    padding-top: 130px;
+    padding-top: 85px;
     display: flex;/*컨테이너에 배치할 때 사용*/
     justify-content: center;
 }
 #main_container .inner{
-    width: 975px;
-    /* height: 500px;
-    background: red; */
+    width: 945px;
+    position: relative;
 }
 
+.contents_box .story_box{
+    width: 610px;
+    height: 84px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 3px;
+    background-color: white;
+    padding: 16px 0;
+    margin-bottom: 24px;
+}
+.contents_box .story_box .storys_and_users{
+    margin: 10px 10px;
+    display: flex;
+}
+.contents_box .story_box .storys_and_users .story{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    color: #262626;
+    font-size: 12px;
+    padding: 0px 4px;
+    cursor: pointer;
+}
+.contents_box .story_box .storys_and_users .story .story_img{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    
+}
+.contents_box .story_box .storys_and_users .story .story_img img{
+    max-width: 100%;
+}
+.contents_box .story_box .storys_and_users .story > div:nth-child(2){
+    margin-top: 10px;
+}
 .contents{
     width: 610px;
     height: auto;
@@ -231,6 +266,10 @@ body{
     justify-content: space-between;/*간격읠 최대한 벌린다*/
     align-items: center;
     padding: 16px;
+}
+.contents .top .more_icon{
+    height: 20px;
+    cursor: pointer;
 }
 .contents .img_section {
     overflow: hidden;
@@ -306,6 +345,7 @@ body{
 }
 .contents .comments_bottom .comments_write_container .emoticon{
     margin: 8px 16px 8px 0;
+    cursor: pointer;
 }
 .contents .comments_bottom .comments_write_container textarea{
     position: relative;
@@ -343,3 +383,100 @@ body{
     pointer-events: initial;
     opacity: 1;
 }
+.inner .side_box{
+    width: 290px;
+    height: 300px;
+    /* background-color: white; */
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.side_box .profile_thumbnail{
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.side_box .profile_thumbnail img{
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+}
+.side_box .user_profile{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #262626;
+    margin: 17px 0;
+}
+.side_box .user_profile .detail .id{
+    height: 17.8px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.side_box .user_profile .detail .name{
+    height: 17.6px;
+    color: #8E8E8E;
+    margin-left: 5px;
+}
+.side_box > article{
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 290px;
+    font-size: 14px;
+    color: #8E8E8E;
+    font-weight: bold; 
+}
+.side_box > article > header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+.side_box > article > header div:nth-child(2){
+    color: #262626;
+    font-size: 12px;
+    cursor: pointer;
+}
+.side_box .recommend .user{
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+}
+.side_box .recommend .user .user_img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+.side_box .recommend .user .user_img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.side_box .recommend .user .detail >div:nth-child(1){
+    height:17.6px;
+    color: #262626;
+    width: 200px;
+    cursor: pointer;
+}
+.side_box .recommend .user .detail >div:nth-child(1):hover{
+    text-decoration: underline;
+}
+.side_box .recommend .user .detail >div:nth-child(2){
+    height:13.6px;
+    color: #8E8E8E;
+    font-size: 12px;
+    width: 200px;
+}
+.side_box .recommend .user .follow{
+    color: #0095F6;
+    font-size: 12px;
+    cursor: pointer;
+}
+
