@@ -84,6 +84,7 @@
 	width: 24px;
 	height: 24px;
 }
+
 .m_text{
     font-size: 14px;
     font-weight: bold;
@@ -204,8 +205,8 @@ body{
     position: relative;
 }
 
-.contents_box .story_box{
-    width: 610px;
+.inner .story_box{
+    max-width: 610px;
     height: 84px;
     border: 1px solid rgba(0,0,0,0.08);
     border-radius: 3px;
@@ -213,11 +214,11 @@ body{
     padding: 16px 0;
     margin-bottom: 24px;
 }
-.contents_box .story_box .storys_and_users{
+.inner .story_box .storys_and_users{
     margin: 10px 10px;
     display: flex;
 }
-.contents_box .story_box .storys_and_users .story{
+.inner .story_box .storys_and_users .story{
     width: 80px;
     height: 80px;
     text-align: center;
@@ -226,7 +227,7 @@ body{
     padding: 0px 4px;
     cursor: pointer;
 }
-.contents_box .story_box .storys_and_users .story .story_img{
+.inner .story_box .storys_and_users .story .story_img{
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -234,14 +235,14 @@ body{
     margin: auto;
     
 }
-.contents_box .story_box .storys_and_users .story .story_img img{
+.inner .story_box .storys_and_users .story .story_img img{
     max-width: 100%;
 }
-.contents_box .story_box .storys_and_users .story > div:nth-child(2){
+.inner .story_box .storys_and_users .story > div:nth-child(2){
     margin-top: 10px;
 }
 .contents{
-    width: 610px;
+    max-width: 610px;
     height: auto;
     border: 1px solid rgba(0,0,0,0.08);
     border-radius: 4px;
@@ -294,9 +295,14 @@ body{
 .contents .bottom_icons .left_icons > div{
     cursor: pointer;
 }
+.heart_btn.on .heart_outline {
+	background: url('../imgs/spritesheet.png') no-repeat -289px -374px;
+	
+}
 .contents .bottom_icons .right_icons > div{
     cursor: pointer;
 }
+
 .contents .like{
     margin: 0 0 8px;
     padding: 0 16px;
@@ -478,5 +484,47 @@ body{
     color: #0095F6;
     font-size: 12px;
     cursor: pointer;
+}
+@media screen and (max-width: 1000px){
+    #header .inner{
+        width: 97.5%;
+    }
+    #main_container .inner{
+        width: 97.5%;
+    }
+    .side_box{
+        display: none;
+    }
+    #main_container .inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .story_box{
+        width: 100%;
+    }
+    .contents .comments_bottom{
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 640px){
+    #header .inner .search_box{
+        display: none;
+    }
+    #main_container{
+        padding-top: 55px;
+        
+    }
+    #main_container .inner{
+        width: 100%;
+    }
+    .contents{
+        border: none;
+        background-color: #FAFAFA;
+    }
+    .contents .time_container{
+        border-bottom: none;
+    }
 }
 

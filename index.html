@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-sacle=1.0, minimum-scale=1.0">
     <title>Document</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
-
-    <script src = "js/main.js"></script>
+    
 </head>
 <body>
     <section id="container">
@@ -39,25 +38,109 @@
         </header>
         <section id="main_container"><!--바디-->
             <div class="inner">
+
+                <article class="story_box"> <!--인스타스토리-->
+                    <div class="storys_and_users">    
+                        <div class="story">
+                            <div class="story_img">
+                                <img src="https://t1.daumcdn.net/cfile/blog/99E0103D5CE5E19926" alt="" class="user_stroy">
+                            </div>
+                            <div>냥냥이</div>
+                        </div>
+                        <div class="story">
+                            <div class="story_img">
+                                <img src="https://t1.daumcdn.net/cfile/blog/99E0103D5CE5E19926" alt="" class="user_stroy">
+                            </div>
+                            <div>냥냥이</div>
+                        </div>
+                    </div> 
+                </article>
                 <div class="contents_box">
-                    <article class="story_box"> <!--인스타스토리-->
-                        <div class="storys_and_users">    
-                            <div class="story">
-                                <div class="story_img">
-                                    <img src="https://t1.daumcdn.net/cfile/blog/99E0103D5CE5E19926" alt="" class="user_stroy">
-                                </div>
-                                <div>냥냥이</div>
-                            </div>
-                            <div class="story">
-                                <div class="story_img">
-                                    <img src="https://t1.daumcdn.net/cfile/blog/99E0103D5CE5E19926" alt="" class="user_stroy">
-                                </div>
-                                <div>냥냥이</div>
-                            </div>
-                        </div> 
-                    </article>
+                    
                     <article class="contents"><!--게시물-->
                         
+                        <div class="top"><!--사용자 정보-->
+                            <div class="user_container">
+                                <div class="profile_img">
+                                   <img src="https://t1.daumcdn.net/cfile/blog/99E0103D5CE5E19926" 
+                                   alt="profile_img"> 
+                                </div>
+                                <div class="user_name">
+                                    <div class="nick_name m_text">ㅎㅇ</div><!--클래스 이름이 두개-->
+                                    <div class="country s_text">Gyeonggi-do, Korea</div><!--클래스 이름이 두개-->
+                                </div>
+                            </div>
+                            <div class="more_icon"></div>
+                        </div>
+
+                        <div class="img_section"><!--게시물 사진-->
+                            <div class="trans_inner">
+                                <div><img src="https://s3.ap-northeast-2.amazonaws.com/elasticbeanstalk-ap-northeast-2-176213403491/media/magazine_img/magazine_283/5-2-%EC%8D%B8%EB%84%A4%EC%9D%BC.jpg" alt="고양이"></div>
+                            </div>
+                        </div>
+
+                        <div class="bottom_icons"><!--좋아요, 공유 아이콘 등등-->
+                            <div class="left_icons">
+                                <div class="heart_btn">
+                                    <div class="heart_outline"></div>
+                                </div>
+                                <div class="bubble_icon"></div>
+                                <div class="share_icon"></div>
+                            </div>
+                            <div class="right_icons">
+                                <div class="bookmark_outline"></div>
+                            </div>
+                        </div>
+
+                        <div class="like m_text"><!--좋아요-->
+                            좋아요
+                            <span class="count">1,234</span>
+                            개
+                        </div>
+
+                        <div class="comment_container">
+                            <div class="enrolled_comments">
+                                <div class="my_comment_container">
+                                    <div class="my_comment">
+                                        <div class="nick_name m_text">han</div>
+                                        &nbsp
+                                        <div>꺆~</div>
+                                    </div>
+                                </div>
+                                <a class="comments_coll" href="">
+                                    댓글 
+                                    <span>5</span>개 모두 보기
+                                </a>
+                                <div class="other_comments_container">
+                                    <div class="other_comments">
+                                        <div class="nick_name m_text">hhh</div>
+                                        &nbsp
+                                        <div>냥냥이</div>
+                                    </div>
+                                    <div class="small_heart">
+                                        <div class="small_heart_outline"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="time_container">
+                                <a href="" class="time">10시간 전</a>
+                            </div>
+                            <div class="comments_bottom">
+                                <div class="comments_write_container">
+                                    <div class="emoticon"></div>
+                                    <textarea aria-label="댓글 달기..." placeholder="댓글 달기..."
+                                    autocomplete="off"></textarea>
+                                    <button class="upload_btn">게시</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </article>
+
+                </div>
+
+                <div class="contents_box">
+                    <article class="contents"><!--게시물-->
                         <div class="top"><!--사용자 정보-->
                             <div class="user_container">
                                 <div class="profile_img">
@@ -181,5 +264,7 @@
             </div>
         </section>
     </section>
+
+    <script src = "js/main.js"></script>
 </body>
 </html>
