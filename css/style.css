@@ -98,18 +98,18 @@
 body{
     background: #fafafa;
 }
-
-#header{
+#container #header{
     width: 100%;
     position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     height: 55px;
     z-index: 999;/*header가 항상 위에 존재*/
     background: white;
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    
 }
-
 #header .inner{
     width: 975px;
     height: 55px;
@@ -117,16 +117,11 @@ body{
     display:flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 1s;
 }
-
 #header .inner .logo > a{
     color: transparent;
 }
-
-/* #header .inner .logo div{
-    vertical-align: middle;
-} */
-
 #header .inner .logo .insta_logo{
     position: relative;
     margin-right: 25px;
@@ -143,6 +138,12 @@ body{
     right: -20px;
     top: 0;
     background: #000;
+}
+#container.on #header .inner .logo .insta_logo{
+    display: none;
+}
+#container.on #header .inner .logo .insta_logo::after{
+    display: none;
 }
 #search_field{
     width: 160px;
@@ -167,6 +168,10 @@ body{
 }
 #header .search_box{
     position: relative;
+}
+#container.on #header .search_box{
+    position: relative;
+    left: 30px;
 }
 #search_field::placeholder{
     font-size: 0;
@@ -269,7 +274,10 @@ body{
     padding: 16px;
 }
 .contents .top .more_icon{
-    height: 20px;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
     cursor: pointer;
 }
 .contents .img_section {
@@ -389,14 +397,16 @@ body{
     pointer-events: initial;
     opacity: 1;
 }
-.inner .side_box{
+.side_box{
     width: 290px;
-    height: 300px;
-    /* background-color: white; */
-    position: absolute;
+    height: auto;
+    position: fixed;
+    top: 88px;
+    /* position: absolute;
     right: 0;
-    top: 0;
+    top: 0; */
 }
+
 .side_box .profile_thumbnail{
     width: 53px;
     height: 53px;
