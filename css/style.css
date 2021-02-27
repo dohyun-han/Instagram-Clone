@@ -140,7 +140,7 @@ body{
     background: #000;
 }
 #container.on #header .inner .logo .insta_logo{
-    display: none;
+    display: none; 
 }
 #container.on #header .inner .logo .insta_logo::after{
     display: none;
@@ -280,6 +280,9 @@ body{
     vertical-align: middle;
     cursor: pointer;
 }
+.more_icon.on{
+    
+}
 .contents .img_section {
     overflow: hidden;
 }
@@ -303,14 +306,16 @@ body{
 .contents .bottom_icons .left_icons > div{
     cursor: pointer;
 }
-.heart_btn.on .heart_outline {
+.heart_btn .heart_outline.on {
 	background: url('../imgs/spritesheet.png') no-repeat -289px -374px;
 	
 }
 .contents .bottom_icons .right_icons > div{
     cursor: pointer;
 }
-
+.bookmark_outline.on{
+    background: url('../imgs/spritesheet.png') no-repeat -396px -399px;
+}
 .contents .like{
     margin: 0 0 8px;
     padding: 0 16px;
@@ -340,6 +345,10 @@ body{
 }
 .contents .other_comments_container .small_heart_outline{
     cursor: pointer;
+}
+.small_heart_outline.on{
+    background: url('../imgs/spritesheet.png') no-repeat -289px -374px;
+    transform: scale(0.5);
 }
 .contents .time_container{
     border-bottom: 1px solid rgba(0,0,0,0.1);
